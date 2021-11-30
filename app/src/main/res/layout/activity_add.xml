@@ -9,7 +9,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="320dp"
-        android:background="@color/red_chifast"
+        android:background="@drawable/splash"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
