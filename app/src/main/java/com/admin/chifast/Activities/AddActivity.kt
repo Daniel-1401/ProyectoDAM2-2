@@ -62,8 +62,8 @@ class AddActivity : AppCompatActivity() {
             if (resultCode == RESULT_OK) {
                 val FileUri = data!!.data
                 val Folder: StorageReference =
-                    FirebaseStorage.getInstance().getReference().child("ImgPlatos")
-                val file_name: StorageReference = Folder.child("file" + FileUri!!.lastPathSegment)
+                    FirebaseStorage.getInstance().getReference().child("menu")
+                val file_name: StorageReference = Folder.child("imagen" + FileUri!!.lastPathSegment)
                 file_name.putFile(FileUri).addOnSuccessListener { taskSnapshot ->
                     file_name.getDownloadUrl().addOnSuccessListener { uri ->
                         val hashMap =
