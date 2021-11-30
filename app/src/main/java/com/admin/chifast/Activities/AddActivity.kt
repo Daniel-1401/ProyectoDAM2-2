@@ -18,7 +18,7 @@ class AddActivity : AppCompatActivity() {
 
     private val database = Firebase.database
     private val File = 1
-    val myRef = database.getReference("user")
+    val myRef = database.getReference("imgPlatos")
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -62,7 +62,7 @@ class AddActivity : AppCompatActivity() {
             if (resultCode == RESULT_OK) {
                 val FileUri = data!!.data
                 val Folder: StorageReference =
-                    FirebaseStorage.getInstance().getReference().child("User")
+                    FirebaseStorage.getInstance().getReference().child("ImgPlatos")
                 val file_name: StorageReference = Folder.child("file" + FileUri!!.lastPathSegment)
                 file_name.putFile(FileUri).addOnSuccessListener { taskSnapshot ->
                     file_name.getDownloadUrl().addOnSuccessListener { uri ->
