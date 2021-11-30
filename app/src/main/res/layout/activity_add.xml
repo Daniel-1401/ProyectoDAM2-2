@@ -13,6 +13,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <View
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_baseline_arrow_back_ios_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titleAddTextView"
@@ -116,7 +126,7 @@
                 android:textColor="@color/text_dark"
                 android:textSize="18sp" />
 
-            <EditText
+            <!--<Button
                 android:id="@+id/urlEditText"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
@@ -132,12 +142,26 @@
                 android:autofillHints=""
                 android:background="@drawable/ic_field"
                 android:ems="10"
-                android:hint="@string/url_form"
-                android:inputType="textUri|text"
                 android:paddingLeft="16dp"
                 android:paddingTop="8dp"
                 android:paddingRight="16dp"
-                android:paddingBottom="8dp" />
+                android:paddingBottom="8dp" /> -->
+            <Button
+                android:id="@+id/btnAgregaImg"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_toEndOf="@+id/precioEditText"
+                android:layout_toRightOf="@+id/precioEditText"
+                android:layout_below="@+id/urlTextView"
+                android:text="añadir"
+                android:textSize="20dp"
+                android:backgroundTint="@color/red_chifast"/>
+
+
 
             <TextView
                 android:id="@+id/urlTextView"
@@ -154,7 +178,7 @@
                 android:layout_marginBottom="8dp"
                 android:layout_toEndOf="@+id/precioTextView"
                 android:layout_toRightOf="@+id/precioTextView"
-                android:text="@string/url_form"
+                android:text="Agregar imagen"
                 android:textColor="@color/text_dark"
                 android:textSize="18sp" />
 
