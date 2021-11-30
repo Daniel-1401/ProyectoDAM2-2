@@ -102,16 +102,7 @@
                 android:layout_marginBottom="40dp"
                 android:text="@string/description"
                 android:textColor="@color/black" />
-
-            <Button
-                android:id="@+id/editProduct"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:width="300dp"
-                android:backgroundTint="@color/red_chifast"
-                android:text="EDITAR"
-                android:textSize="25dp" />
+            
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

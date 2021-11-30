@@ -1,5 +1,6 @@
 package com.admin.chifast.Activities
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.admin.chifast.Menu
 import com.admin.chifast.R
 import com.bumptech.glide.Glide
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -47,6 +49,29 @@ class MainActivity : AppCompatActivity() {
 
         listMenus.clear()
         setupRecyclerView(menuRecyclerView)
+
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("email", email)
+        prefs.commit()
+        setup()
+
+    }
+
+    private fun setup() {
+        title = "Inicio"
+
+
+        btnLogOut.setOnClickListener {
+
+            val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.commit()
+
+            FirebaseAuth.getInstance().signOut()
+
+            val loginIntent = Intent(this, AuthActivity::class.java)
+            startActivity(loginIntent)
+        }
 
     }
 
