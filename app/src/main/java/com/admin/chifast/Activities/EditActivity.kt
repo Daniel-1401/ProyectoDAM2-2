@@ -26,7 +26,6 @@ import kotlinx.android.synthetic.main.activity_edit.saveButton
 class EditActivity : AppCompatActivity() {
 
     private val GALLERY_INTENT = 1
-    private val key = intent.getStringExtra("key")
     private val database = Firebase.database
     private var FileUri: Uri? = null
     private var urlImagen= ""
@@ -35,7 +34,7 @@ class EditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit)
 
-
+        val key = intent.getStringExtra("key")
         @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS") val myRef = database.getReference("menu").child(
             key.toString()
         )
@@ -67,12 +66,11 @@ class EditActivity : AppCompatActivity() {
             val name : String = nameEditText.text.toString()
             val precio : String = precioEditText.text.toString()
             val description: String = descriptionEditText.text.toString()
-            val url: String = ""
 
             myRef.child("name").setValue(name)
             myRef.child("precio").setValue(precio)
             myRef.child("description").setValue(description)
-            myRef.child("url").setValue(url)
+            myRef.child("url").setValue(urlImagen)
 
             finish()
         }
