@@ -1,8 +1,10 @@
-package com.admin.chifast
+package com.admin.chifast.Activities
 
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.admin.chifast.Menu
+import com.admin.chifast.R
 import com.bumptech.glide.Glide
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -13,7 +15,7 @@ import kotlinx.android.synthetic.main.activity_add.descriptionTextView
 import kotlinx.android.synthetic.main.activity_add.nameTextView
 import kotlinx.android.synthetic.main.activity_menu_detalle.*
 
-class MenuDetalle : AppCompatActivity() {
+class MenuDetalleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu_detalle)
@@ -25,21 +27,33 @@ class MenuDetalle : AppCompatActivity() {
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val menu:Menu? = dataSnapshot.getValue(Menu::class.java)
+                val menu: Menu? = dataSnapshot.getValue(Menu::class.java)
                 if (menu != null) {
-                    nameTextView.text = menu.name.toString()
-                    descriptionTextView.text = menu.description.toString()
+                    nameProducto.text = menu.name.toString()
+                    descriptionProducto.text = menu.description.toString()
                     images(menu.url.toString())
                 }
             }
+
 
             override fun onCancelled(error: DatabaseError) {
                 Log.w("TAG", "Failed to read value.", error.toException())
             }
         })
 
+        btnBack.setOnClickListener{
+            onBackPressed()
+        }
+
+        editProduct.setOnClickListener {
+            goEditLayout()
+        }
+    }
+
+    private fun goEditLayout() {
 
     }
+
 
     private  fun images(url: String){
         Glide.with(this)

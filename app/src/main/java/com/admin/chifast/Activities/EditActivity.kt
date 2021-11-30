@@ -1,9 +1,11 @@
-package com.admin.chifast
+package com.admin.chifast.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
+import com.admin.chifast.Menu
+import com.admin.chifast.R
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -23,7 +25,7 @@ class EditActivity : AppCompatActivity() {
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
 
-                val menu:Menu? = dataSnapshot.getValue(Menu::class.java)
+                val menu: Menu? = dataSnapshot.getValue(Menu::class.java)
                 if (menu != null) {
                     nameEditText.text = Editable.Factory.getInstance().newEditable(menu.name)
                     precioEditText.text = Editable.Factory.getInstance().newEditable(menu.precio)

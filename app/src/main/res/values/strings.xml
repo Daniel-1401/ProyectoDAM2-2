@@ -13,4 +13,6 @@
     <string name="description_form">Descripción</string>
     <string name="save">Guardar</string>
     <string name="description">Chaufa sabroso y delicioso.</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
 </resources>

@@ -1,7 +1,9 @@
-package com.admin.chifast
+package com.admin.chifast.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.admin.chifast.Menu
+import com.admin.chifast.R
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add.*

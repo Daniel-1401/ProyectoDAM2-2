@@ -1,4 +1,4 @@
-package com.admin.chifast
+package com.admin.chifast.Activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
+import com.admin.chifast.Menu
+import com.admin.chifast.R
 import com.bumptech.glide.Glide
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
@@ -20,6 +22,7 @@ import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.menu_content.view.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +39,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddActivity::class.java)
             v.context.startActivity(intent)
         }
+
+        val bundle = intent.extras
+        val email = bundle?.getString("email")
+
+        NameUser.text = email
 
         listMenus.clear()
         setupRecyclerView(menuRecyclerView)
@@ -89,7 +97,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             holder.itemView.setOnClickListener { v ->
-                val intent = Intent(v.context, MenuDetalle::class.java).apply {
+                val intent = Intent(v.context, MenuDetalleActivity::class.java).apply {
                     putExtra("key", menu.key)
                 }
                 v.context.startActivity(intent)

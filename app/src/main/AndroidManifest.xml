@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.admin.chifast">
+    package="com.admin.chifast" >
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_launcher_chifast"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true">
-        <activity android:name="com.admin.chifast.EditActivity"
-            android:theme="@style/Theme.FormActivity"/>
+        android:roundIcon="@mipmap/ic_launcher_chifast_round"
+        android:supportsRtl="true" >
         <activity
-            android:name="com.admin.chifast.MenuDetalle"
-            android:theme="@style/Theme.DetailActivity" />
-        <activity
-            android:name="com.admin.chifast.AddActivity"
-            android:theme="@style/Theme.FormActivity" />
-        <activity
-            android:name="com.admin.chifast.MainActivity"
-            android:theme="@style/Theme.MainActivity">
+            android:name=".Activities.AuthActivity"
+            android:theme="@style/Theme.AuthActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activities.EditActivity"
+            android:theme="@style/Theme.FormActivity" />
+        <activity
+            android:name=".Activities.MenuDetalleActivity"
+            android:theme="@style/Theme.DetailActivity" />
+        <activity
+            android:name=".Activities.AddActivity"
+            android:theme="@style/Theme.FormActivity" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:theme="@style/Theme.MainActivity" />
     </application>
 
 </manifest>

@@ -29,4 +29,14 @@
         <item name="android:statusBarColor" tools:targetApi="l">@color/red_chifast</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.AuthActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimaryDark">@color/red_chifast</item>
+        <!-- Secondary brand color. -->
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/red_chifast</item>
+        <!-- Customize your theme here. -->
+    </style>
 </resources>
