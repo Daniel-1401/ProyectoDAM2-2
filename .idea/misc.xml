@@ -6,32 +6,22 @@
         <entry key="..\:/Android/AndroidStudioProjects/ChifastADMIN/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Android/AndroidStudioProjects/ChifastADMIN/app/src/main/res/layout/activity_menu_detalle.xml" value="0.264" />
         <entry key="..\:/Android/AndroidStudioProjects/ChifastADMIN/app/src/main/res/layout/menu_content.xml" value="0.264" />
-<<<<<<< HEAD
         <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/drawable/ic_btn.xml" value="0.2703125" />
         <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/drawable/rounded_shape.xml" value="0.2703125" />
+        <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/layout/activity_add.xml" value="0.176" />
+        <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/layout/activity_auth.xml" value="0.16799999999999998" />
         <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/layout/activity_menu_detalle.xml" value="0.5153256704980843" />
         <entry key="..\:/Android/AndroidStudioProjects/ChifastAdmin/app/src/main/res/layout/menu_content.xml" value="0.264" />
-=======
->>>>>>> daniel
         <entry key="..\:/Android/AndroidStudioProjects/FirebaseKotlinCRUD/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Android/AndroidStudioProjects/FirebaseKotlinCRUD/app/src/main/res/layout/activity_menu_detalle.xml" value="0.1" />
         <entry key="..\:/Android/AndroidStudioProjects/FirebaseKotlinCRUD/app/src/main/res/layout/activity_videogame_detail.xml" value="0.15677083333333333" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/drawable/ic_plus.xml" value="0.4276041666666667" />
         <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/drawable/rounded_shape.xml" value="0.3138888888888889" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_add.xml" value="0.33" />
         <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_auth.xml" value="0.33" />
         <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_edit.xml" value="0.2803442028985507" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_menu_detalle.xml" value="0.33" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/activity_user.xml" value="0.4114583333333333" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/app_bar_user.xml" value="0.4114583333333333" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/content_user.xml" value="0.2001013171225937" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/fragment_gallery.xml" value="0.4114583333333333" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/fragment_home.xml" value="0.4114583333333333" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/fragment_slideshow.xml" value="0.2001013171225937" />
         <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/menu_content.xml" value="0.2001013171225937" />
-        <entry key="..\:/Users/carlo/Desktop/ChifastADMIN/app/src/main/res/layout/nav_header_user.xml" value="0.2001013171225937" />
       </map>
     </option>
   </component>
