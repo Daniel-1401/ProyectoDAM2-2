@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/title_activity_edit"
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/cardView"

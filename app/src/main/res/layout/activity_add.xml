@@ -32,6 +32,7 @@
         android:text="@string/title_activity_add"
         android:textColor="@color/white"
         android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="16dp" />
@@ -150,16 +151,17 @@
                 android:id="@+id/btnAgregaImg"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
+                android:layout_below="@+id/urlTextView"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_toEndOf="@+id/precioEditText"
                 android:layout_toRightOf="@+id/precioEditText"
-                android:layout_below="@+id/urlTextView"
+                android:background="@drawable/ic_btn"
                 android:text="añadir"
-                android:textSize="20dp"
-                android:backgroundTint="@color/red_chifast"/>
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
 
 
