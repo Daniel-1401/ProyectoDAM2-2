@@ -32,7 +32,6 @@ class EditActivity : AppCompatActivity() {
                     nameEditText.text = Editable.Factory.getInstance().newEditable(menu.name)
                     precioEditText.text = Editable.Factory.getInstance().newEditable(menu.precio)
                     descriptionEditText.text = Editable.Factory.getInstance().newEditable(menu.description)
-                    urlEditText.text = Editable.Factory.getInstance().newEditable(menu.url)
                 }
 
             }

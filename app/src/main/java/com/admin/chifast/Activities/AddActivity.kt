@@ -1,6 +1,7 @@
 package com.admin.chifast.Activities
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -12,13 +13,14 @@ import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.activity_add.*
 import kotlinx.android.synthetic.main.activity_add.btnBack
-import kotlinx.android.synthetic.main.activity_menu_detalle.*
 
 class AddActivity : AppCompatActivity() {
 
     private val database = Firebase.database
-    private val File = 1
-    val myRef = database.getReference("imgPlatos")
+    private val GALLERY_INTENT = 1
+    val myRef = database.getReference("menu")
+    private var FileUri: Uri? = null
+    private var hashMap: HashMap<String, String>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -26,7 +28,6 @@ class AddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add)
 
-        val myRef = database.getReference("menu")
 
         val name=nameEditText.text
         val precio=precioEditText.text
@@ -44,7 +45,7 @@ class AddActivity : AppCompatActivity() {
         }
     }
 
-    private fun saveDate(name:String, precio:String, description:String ) {
+    private fun saveDate(name:String, precio:String, description:String,  ) {
         val menu = Menu(name, precio, description)
         myRef.child(myRef.push().key.toString()).setValue(menu)
         finish()
@@ -53,23 +54,21 @@ class AddActivity : AppCompatActivity() {
     private fun fileUpload() {
         val intent = Intent(Intent.ACTION_GET_CONTENT)
         intent.type = "*/*"
-        startActivityForResult(intent, File)
+        startActivityForResult(intent, GALLERY_INTENT)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == File) {
+        if (requestCode == GALLERY_INTENT) {
             if (resultCode == RESULT_OK) {
-                val FileUri = data!!.data
+                FileUri = data!!.data!!
                 val Folder: StorageReference =
                     FirebaseStorage.getInstance().getReference().child("menu")
                 val file_name: StorageReference = Folder.child("imagen" + FileUri!!.lastPathSegment)
-                file_name.putFile(FileUri).addOnSuccessListener { taskSnapshot ->
+                file_name.putFile(FileUri!!).addOnSuccessListener { taskSnapshot ->
                     file_name.getDownloadUrl().addOnSuccessListener { uri ->
-                        val hashMap =
-                            HashMap<String, String>()
-                        hashMap["link"] = java.lang.String.valueOf(uri)
-                        myRef.setValue(hashMap)
+                        hashMap = HashMap<String, String>()
+                        hashMap!!["link"] = java.lang.String.valueOf(uri)
                         Log.d("Mensaje", "Se subió correctamente")
                     }
                 }
