@@ -126,28 +126,21 @@
                 android:textColor="@color/text_dark"
                 android:textSize="18sp" />
 
-            <EditText
-                android:id="@+id/urlEditText"
+            <Button
+                android:id="@+id/btnAgregaImg"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:layout_below="@+id/urlTextView"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_toEndOf="@+id/precioEditText"
                 android:layout_toRightOf="@+id/precioEditText"
-                android:autofillHints=""
-                android:background="@drawable/ic_field"
-                android:ems="10"
-                android:hint="@string/url_form"
-                android:inputType="textUri|text"
-                android:paddingLeft="16dp"
-                android:paddingTop="8dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp" />
+                android:background="@drawable/ic_btn"
+                android:text="añadir"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/urlTextView"

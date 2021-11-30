@@ -20,7 +20,7 @@ class AddActivity : AppCompatActivity() {
     private val GALLERY_INTENT = 1
     val myRef = database.getReference("menu")
     private var FileUri: Uri? = null
-    private var hashMap: HashMap<String, String>? = null
+    private var urlImagen= ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -32,7 +32,7 @@ class AddActivity : AppCompatActivity() {
         val name=nameEditText.text
         val precio=precioEditText.text
         val description=descriptionEditText.text
-        //val url=urlEditText.text --, url.toString()
+
 
         saveButton.setOnClickListener { v ->
             saveDate(name.toString(), precio.toString(), description.toString())
@@ -46,7 +46,7 @@ class AddActivity : AppCompatActivity() {
     }
 
     private fun saveDate(name:String, precio:String, description:String,  ) {
-        val menu = Menu(name, precio, description)
+        val menu = Menu(name, precio, description,urlImagen)
         myRef.child(myRef.push().key.toString()).setValue(menu)
         finish()
     }
@@ -67,8 +67,7 @@ class AddActivity : AppCompatActivity() {
                 val file_name: StorageReference = Folder.child("imagen" + FileUri!!.lastPathSegment)
                 file_name.putFile(FileUri!!).addOnSuccessListener { taskSnapshot ->
                     file_name.getDownloadUrl().addOnSuccessListener { uri ->
-                        hashMap = HashMap<String, String>()
-                        hashMap!!["link"] = java.lang.String.valueOf(uri)
+                        urlImagen = java.lang.String.valueOf(uri)
                         Log.d("Mensaje", "Se subió correctamente")
                     }
                 }
