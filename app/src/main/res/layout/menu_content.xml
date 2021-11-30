@@ -49,8 +49,8 @@
                 android:layout_marginEnd="120dp"
                 android:layout_marginRight="120dp"
                 android:layout_marginBottom="32dp"
-                android:textColor="#cbcbcb"
-                android:text="@string/precio" />
+                android:text="@string/precio"
+                android:textColor="#7E7E7E" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

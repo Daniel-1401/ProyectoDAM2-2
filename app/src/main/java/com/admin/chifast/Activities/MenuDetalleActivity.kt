@@ -30,6 +30,7 @@ class MenuDetalleActivity : AppCompatActivity() {
                 val menu: Menu? = dataSnapshot.getValue(Menu::class.java)
                 if (menu != null) {
                     nameProducto.text = menu.name.toString()
+                    precioProducto.text = menu.precio.toString()
                     descriptionProducto.text = menu.description.toString()
                     images(menu.url.toString())
                 }

@@ -27,10 +27,11 @@
             android:layout_marginRight="16dp"
             android:layout_toStartOf="@+id/imageView"
             android:layout_toLeftOf="@+id/imageView"
-            android:text="BIENVENIDO"
             android:fontFamily="sans-serif"
+            android:text="BIENVENIDO"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/NameUser"
