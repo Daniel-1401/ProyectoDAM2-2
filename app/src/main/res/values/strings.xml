@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Chifast ADMIN</string>
+    <string name="all">TODO</string>
+    <string name="name">Chaufa Básico</string>
+    <string name="precio">30 de noviembre del 2021</string>
+    <string name="title_activity_main">Carta - Chifast</string>
+    <string name="subtitle_activity_main">2021</string>
+    <string name="title_activity_add">Nuevo plato</string>
+    <string name="title_activity_edit">Detalles del plato</string>
+    <string name="name_form">Nombre</string>
+    <string name="precio_form">Precio</string>
+    <string name="url_form">Url imagen</string>
+    <string name="description_form">Descripción</string>
+    <string name="save">Guardar</string>
+    <string name="description">Chaufa sabroso y delicioso.</string>
+</resources>
