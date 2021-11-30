@@ -17,18 +17,29 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/btnLogOut"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_toStartOf="@+id/imageView"
+            android:layout_toLeftOf="@+id/imageView"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/logout" />
+
+        <TextView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="166dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginEnd="116dp"
+            android:layout_marginRight="116dp"
             android:layout_toStartOf="@+id/imageView"
             android:layout_toLeftOf="@+id/imageView"
-            android:text="BIENVENIDO"
             android:fontFamily="sans-serif"
+            android:text="BIENVENIDO"
             android:textColor="@color/white"
             android:textSize="24sp" />
 
@@ -83,6 +94,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="16dp"
         android:contentDescription="@string/all"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/menuRecyclerView"

@@ -15,4 +15,6 @@
     <string name="description">Chaufa sabroso y delicioso.</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
+
+    <string name="prefs_file">com.admin.chifast.PREFERENCE_FILE_KEY</string>
 </resources>

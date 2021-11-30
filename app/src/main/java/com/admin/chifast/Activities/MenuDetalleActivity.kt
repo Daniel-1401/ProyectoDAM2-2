@@ -1,5 +1,6 @@
 package com.admin.chifast.Activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -14,6 +15,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_add.descriptionTextView
 import kotlinx.android.synthetic.main.activity_add.nameTextView
 import kotlinx.android.synthetic.main.activity_menu_detalle.*
+import java.time.Instant
 
 class MenuDetalleActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +24,9 @@ class MenuDetalleActivity : AppCompatActivity() {
 
         val key = intent.getStringExtra("key")
         val database = Firebase.database
-        @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS") val myRef = database.getReference("menu").child(key)
+        @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS") val myRef = database.getReference("menu").child(
+            key.toString()
+        )
 
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
@@ -45,13 +49,11 @@ class MenuDetalleActivity : AppCompatActivity() {
             onBackPressed()
         }
 
-        editProduct.setOnClickListener {
-            goEditLayout()
-        }
     }
 
     private fun goEditLayout() {
-
+        val editIntent = Intent(this, EditActivity::class.java)
+        startActivity(editIntent)
     }
 
 
